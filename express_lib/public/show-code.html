@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post to barcode</title>
+    <script src="linkAndDisplay.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+            font-family: "宋体";
+            font-size:16px;
+        }
+        #wrap{
+            width:500px;
+            margin:30px auto;
+            padding:20px 30px;
+            border:1px solid #000;
+        }
+        header{
+            text-align:center;
+        }
+        .input,.output,.choose{
+            width:400px;
+            margin:30px auto;
+            padding:5px;
+        }
+        .input label,.output label{
+            display:block;
+            height:25px;
+            line-height:25px;
+            float:left;
+        }
+        .input input{
+            width:280px;
+            height:25px;
+            margin-left:30px;
+        }
+        .input p{
+            display:none;
+            margin:5px 0 0 110px;
+            font-size:14px;
+            color:#f00;
+        }
+        .output input{
+            width:280px;
+            height:25px;
+            margin-left:60px;
+            border:hidden;
+        }
+        .choose label{
+            margin-right:30px;
+        }
+        button{
+            display:block;
+            width:40px;
+            height:30px;
+            line-height:30px;
+            margin:30px auto;
+            border-radius:10px;
+            border:1px solid #000;
+            background-color: #fff;
+        }
+        table{
+            width:400px;
+            margin:0 auto;
+            border-top:1px solid #000;
+        }
+        table caption{
+            margin-bottom:30px;
+        }
+        table tbody tr{
+            display: block;
+            height:50px;
+            line-height:50px;
+            border-bottom:1px solid #000;
+        }
+        table tbody tr td{
+            float: left;
+            display:block;
+            width:195px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header>POST-NET</header>
+    <form>
+        <div class="input">
+            <label for="inputcode">Input code</label>
+            <input id="inputcontent" name="code" type="text" placeholder="Please input code here"/>
+            <p>Error message should be displayed here.</p>
+        </div>
+
+        <div class="output">
+            <label for="outputcode">Result</label>
+            <input id="outputcontent" name="code" type="text"/>
+        </div>
+        <div class="choose">
+            <input id="ch_1" type="radio" name="trans" value="a1" checked/>
+            <label for="choose1">Barcode to Zipcode</label>
+            <input id="ch_2" type="radio" name="trans" value="a2"/>
+            <label for="choose2">Zipcode to Barcode</label>
+        </div>
+        <button id="btn" type="button">OK</button>
+    </form>
+    <table>
+        <caption>History</caption>
+        <tbody>
+        <tr>
+            <td>Code</td>
+            <td>Result</td>
+        </tr>
+
+        <tr>
+            <td>blah blah blah</td>
+            <td>blah blah blah</td>
+        </tr>
+
+        <tr>
+            <td>blah blah blah</td>
+            <td>blah blah blah</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
